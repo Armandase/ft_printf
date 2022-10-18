@@ -6,13 +6,14 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 10:01:46 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/04 10:02:06 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:24:04 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void    ft_putchar(char c) 
-{ 
-    write(1, &c, 1); 
+void	ft_putnchar(char c, size_t *ret)
+{
+	write(1, &c, 1);
+	*ret = *ret + 1;
 }

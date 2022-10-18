@@ -6,18 +6,24 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:15:03 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/05 11:14:14 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:54:06 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putstr(char	*s, size_t	*ret)
 {
 	int	i;
 
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		*ret = *ret + 6;
+		return ;
+	}
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		write(1, &s[i++], 1);
 		*ret = *ret + 1;
