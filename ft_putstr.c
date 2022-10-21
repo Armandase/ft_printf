@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 18:15:03 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/10 10:54:06 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/21 14:40:07 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char	*s, size_t	*ret)
+void	ft_putstr(char	*s, size_t *ret)
 {
 	int	i;
 
