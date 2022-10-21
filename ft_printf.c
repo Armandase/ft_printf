@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:04:53 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/10 11:23:30 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/21 09:46:37 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ int	ft_printf(const char *s, ...)
 	while (s[i])
 	{
 		if (s[i] == '%')
-			ft_convert(s, ++i, ret, args);
+		{
+			i++;
+			ft_convert(s, i, ret, args);
+		}
 		else
 			ft_putnchar(s[i], ret);
 		if (*ret == 0 && !s[i])
