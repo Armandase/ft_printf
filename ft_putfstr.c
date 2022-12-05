@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 10:01:46 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/10 11:24:04 by adamiens         ###   ########.fr       */
+/*   Created: 2022/10/04 18:15:03 by adamiens          #+#    #+#             */
+/*   Updated: 2022/11/02 15:20:51 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnchar(char c, size_t *ret)
+void	ft_putfstr(char	*s, size_t *ret)
 {
-	write(1, &c, 1);
-	*ret = *ret + 1;
+	int	i;
+
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		*ret = *ret + 6;
+		return ;
+	}
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i++], 1);
+		*ret = *ret + 1;
+	}
 }
